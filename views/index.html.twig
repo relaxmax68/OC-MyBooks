@@ -3,10 +3,10 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-{% for article in articles %}
-<article>
-    <h2><a class="articleTitle" href="/article/{{ article.id }}">{{ article.title }}</a></h2>
-    <p>{{ article.content }}</p>
-</article>
+{% for book in books %}
+<book>
+    <h2><a class="bookTitle" href="/book/{{ book.id }}">{{ book.title }}</a></h2>
+    <p>{{ book.summary }}</p>
+</abook>
 {% endfor %}
 {% endblock %}

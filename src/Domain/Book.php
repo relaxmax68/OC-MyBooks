@@ -2,28 +2,28 @@
 
 namespace MicroCMS\Domain;
 
-class Article 
+class Book 
 {
     /**
-     * Article id.
+     * Book id.
      *
      * @var integer
      */
     private $id;
 
     /**
-     * Article title.
+     * Book title.
      *
      * @var string
      */
     private $title;
 
     /**
-     * Article content.
+     * Book summary.
      *
      * @var string
      */
-    private $content;
+    private $summary;
 
     public function getId() {
         return $this->id;
@@ -41,11 +41,11 @@ class Article
         $this->title = $title;
     }
 
-    public function getContent() {
-        return $this->content;
+    public function getSummary() {
+        return $this->summary;
     }
 
-    public function setContent($content) {
-        $this->content = $content;
+    public function setSummary($summary) {
+        $this->summary = $summary;
     }
 }

@@ -2,35 +2,35 @@
 
 namespace MicroCMS\Domain;
 
-class Comment 
+class Info 
 {
     /**
-     * Comment id.
+     * Info id.
      *
      * @var integer
      */
     private $id;
 
     /**
-     * Comment author.
+     * Info author.
      *
      * @var string
      */
     private $author;
 
     /**
-     * Comment content.
+     * Info content.
      *
      * @var integer
      */
     private $content;
 
     /**
-     * Associated article.
+     * Associated book.
      *
      * @var \MicroCMS\Domain\Article
      */
-    private $article;
+    private $book;
 
     public function getId() {
         return $this->id;
@@ -56,11 +56,11 @@ class Comment
         $this->content = $content;
     }
 
-    public function getArticle() {
-        return $this->article;
+    public function getBook() {
+        return $this->book;
     }
 
-    public function setArticle(Article $article) {
-        $this->article = $article;
+    public function setBook(Article $book) {
+        $this->book = $book;
     }
 }
