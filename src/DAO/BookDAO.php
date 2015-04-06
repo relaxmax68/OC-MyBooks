@@ -33,8 +33,9 @@ class BookDAO extends DAO
     protected function buildDomainObject($row) {
         $book = new Book();
         $book->setId($row['book_id']);
-        $book->setTitle($row['book_title']);
+        $book->setIsbn($row['book_isbn']);
         $book->setSummary($row['book_summary']);
+        $book->setTitle($row['book_title']);
         return $book;
     }
 

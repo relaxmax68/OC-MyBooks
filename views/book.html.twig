@@ -1,16 +1,16 @@
 {% extends "layout.html.twig" %}
 
-{% block title %}{{ article.title }}{% endblock %}
+{% block title %}{{ book.title }}{% endblock %}
 
 {% block content %}
 <p>
-    <h2>{{ article.title }}</h2>
-    <p>{{ article.content }}</p>
-    <h3>Comments</h3>
-    {% for comment in comments %}
-        <strong>{{ comment.author }}</strong> said : {{ comment.content }}<br>
+    <h2>{{ book.title }}</h2>
+    <p>{{ book.content }}</p>
+    <h3>Infos</h3>
+    {% for info in infos %}
+        <strong>{{ info.auth_first_name }}</strong> said : {{ info.last_name }}<br>
     {% else %}
-        No comments yet.
+        No infos yet.
     {% endfor %}
 </p>
 {% endblock %}

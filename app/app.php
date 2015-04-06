@@ -16,8 +16,8 @@ $app['dao.book'] = $app->share(function ($app) {
     return new MicroCMS\DAO\BookDAO($app['db']);
 });
 
-$app['dao.infos'] = $app->share(function ($app) {
-    $infoDAO = new MicroCMS\DAO\infoDAO($app['db']);
-    $infoDAO->setBookDAO($app['dao.book']);
-    return $infoDAO;
+$app['dao.author'] = $app->share(function ($app) {
+    $authorDAO = new MicroCMS\DAO\AuthorDAO($app['db']);
+    $authorDAO->setBookDAO($app['dao.book']);
+    return $authorDAO;
 });

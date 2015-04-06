@@ -11,12 +11,19 @@ class Book
      */
     private $id;
 
-    /**
+        /**
      * Book title.
      *
      * @var string
      */
     private $title;
+
+    /**
+     * Book isbn.
+     *
+     * @var string
+     */
+    private $isbn;
 
     /**
      * Book summary.
@@ -39,6 +46,14 @@ class Book
 
     public function setTitle($title) {
         $this->title = $title;
+    }
+
+    public function getIsbn() {
+        return $this->isbn;
+    }
+
+    public function setIsbn($isbn) {
+        $this->isbn = $isbn;
     }
 
     public function getSummary() {
